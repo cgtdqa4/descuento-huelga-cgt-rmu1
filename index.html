@@ -76,15 +76,21 @@
 
         <!-- Hero Banner -->
         <section class="bg-gradient-to-r from-gray-900 via-gray-900 to-red-950/40 border border-red-900/50 rounded-2xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
-            <div class="relative z-10 max-w-3xl space-y-4">
+            <div class="relative z-10 max-w-4xl space-y-4">
                 <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-red-950 text-red-400 border border-red-800/50">
                     <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
                     CGT RMU1 - Información de Huelga
                 </span>
-                <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
-                    Portal de Huelga: <span class="text-red-500">Información y Derechos</span>
-                </h2>
-                <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+                
+                <!-- Encabezado con imagen a la izquierda -->
+                <div class="flex flex-col sm:flex-row sm:items-center gap-4 pt-1">
+                    <img src="https://i.imgur.com/dFga5sJ.png" alt="Imagen Portal Huelga" class="w-16 h-16 sm:w-20 sm:h-20 object-contain rounded-xl bg-gray-950/60 p-1.5 border border-red-800/50 shadow-lg flex-shrink-0">
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                        Portal de Huelga: <span class="text-red-500">Información y Derechos</span>
+                    </h2>
+                </div>
+
+                <p class="text-gray-300 text-sm sm:text-base leading-relaxed pt-2">
                     Calcula el impacto exacto en tu nómina basándote en el Salario Bruto Anual a 40h y tu jornada real de contrato, conoce tus derechos frente a abusos de la empresa y reporta directamente cualquier incidencia a la Sección Sindical de CGT RMU1.
                 </p>
             </div>
@@ -236,7 +242,7 @@
                 <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
-                <input type="text" id="faqSearchInput" placeholder="Buscar duda legal (ej. avisar, sanciones, servicios mínimos)..."
+                <input type="text" id="faqSearchInput" placeholder="Buscar duda legal (ej. avisar, ETT, turno de noche, piquetes)..."
                     class="w-full pl-10 pr-4 py-3 bg-gray-900 border border-gray-800 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-red-500 text-sm">
             </div>
 
@@ -255,6 +261,16 @@
 
                 <div class="faq-item bg-gray-900 border border-gray-800 rounded-xl overflow-hidden transition-colors">
                     <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                        <span>¿Puedo secundar la huelga si estoy en periodo de prueba, ETT o contrato temporal?</span>
+                        <i class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden px-4 pb-4 text-sm text-gray-300 border-t border-gray-800/50 pt-3 leading-relaxed">
+                        <strong>Sí, rotundamente.</strong> El derecho a huelga ampara a la totalidad de la plantilla independientemente del tipo de contrato (indefinido, temporal, obra y servicio, ETT, formación) o de si estás en periodo de prueba. Despedir o no renovar a alguien por hacer huelga constituye una vulneración de Derechos Fundamentales y es causa de despido nulo.
+                    </div>
+                </div>
+
+                <div class="faq-item bg-gray-900 border border-gray-800 rounded-xl overflow-hidden transition-colors">
+                    <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
                         <span>¿Pueden sancionarme o despedirme por hacer huelga?</span>
                         <i class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
                     </button>
@@ -265,11 +281,41 @@
 
                 <div class="faq-item bg-gray-900 border border-gray-800 rounded-xl overflow-hidden transition-colors">
                     <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                        <span>¿Qué ocurre con la huelga si trabajo en el turno de noche?</span>
+                        <i class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden px-4 pb-4 text-sm text-gray-300 border-t border-gray-800/50 pt-3 leading-relaxed">
+                        La huelga computa para el turno que comience dentro de la jornada de huelga (habitualmente desde las 00:00 hasta las 24:00 del día convocado). Si tu turno empieza la noche de la jornada de huelga, esa jornada completa de trabajo queda amparada por la huelga.
+                    </div>
+                </div>
+
+                <div class="faq-item bg-gray-900 border border-gray-800 rounded-xl overflow-hidden transition-colors">
+                    <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
                         <span>¿Qué es el "esquirolaje" y qué hago si la empresa intenta sustituirme?</span>
                         <i class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
                     </button>
                     <div class="faq-answer hidden px-4 pb-4 text-sm text-gray-300 border-t border-gray-800/50 pt-3 leading-relaxed">
                         El esquirolaje es la sustitución de los trabajadores en huelga por personal externo o mediante la reasignación interna de tareas no habituales a otros trabajadores no huelguistas. <strong>Es completamente ilegal.</strong> Si detectas esta práctica en tu centro de trabajo, documenta la situación y repórtala de inmediato en la sección de incidencias.
+                    </div>
+                </div>
+
+                <div class="faq-item bg-gray-900 border border-gray-800 rounded-xl overflow-hidden transition-colors">
+                    <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                        <span>¿Tengo derecho a participar en piquetes informativos?</span>
+                        <i class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden px-4 pb-4 text-sm text-gray-300 border-t border-gray-800/50 pt-3 leading-relaxed">
+                        <strong>Sí.</strong> La ley reconoce explícitamente el derecho de los trabajadores en huelga a constituir piquetes informativos a las puertas del centro de trabajo para dar a conocer las reivindicaciones y pedir pacíficamente el apoyo a la huelga sin coacción ni violencia.
+                    </div>
+                </div>
+
+                <div class="faq-item bg-gray-900 border border-gray-800 rounded-xl overflow-hidden transition-colors">
+                    <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                        <span>¿Me pueden quitar el plus de asistencia, puntualidad o incentivos por hacer huelga?</span>
+                        <i class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden px-4 pb-4 text-sm text-gray-300 border-t border-gray-800/50 pt-3 leading-relaxed">
+                        El descuento salarial solo puede aplicarse sobre la parte proporcional de los conceptos retributivos del día de huelga (salario base y complementos prorrateados). Quitar la totalidad de un plus de asistencia o penalizar incentivos mensuales de forma desproporcionada por el mero hecho de ejercer el derecho a huelga es una sanción encubierta e **ilegal**.
                     </div>
                 </div>
 
@@ -290,6 +336,16 @@
                     </button>
                     <div class="faq-answer hidden px-4 pb-4 text-sm text-gray-300 border-t border-gray-800/50 pt-3 leading-relaxed">
                         <strong>No.</strong> La huelga suspende la obligación de trabajar y de abonar el salario de ese día, pero no reduce en ningún caso los días de vacaciones anuales ni computa negativamente para el cálculo de tu antigüedad en la empresa.
+                    </div>
+                </div>
+
+                <div class="faq-item bg-gray-900 border border-gray-800 rounded-xl overflow-hidden transition-colors">
+                    <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                        <span>¿Qué hago si mi responsable o mando me obliga a firmar un documento de adscripción?</span>
+                        <i class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden px-4 pb-4 text-sm text-gray-300 border-t border-gray-800/50 pt-3 leading-relaxed">
+                        No debes firmar ningún documento donde te pidan declarar de antemano si secundarás la huelga. Si insisten o hay coacción, anota nombres, hora y lugar, y repórtalo inmediatamente a la Sección Sindical de CGT para iniciar las acciones legales oportunas.
                     </div>
                 </div>
 
@@ -540,4 +596,4 @@
         }
     </script>
 </body>
-</html>
+</html>         
