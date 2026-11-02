@@ -38,10 +38,8 @@
     <header class="bg-gray-900 border-b border-red-900/40 sticky top-0 z-50 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <!-- Insignia en encabezado -->
-                <div class="bg-red-600 text-black font-black text-xl px-3 py-1 rounded-lg shadow-md border border-red-500 flex items-center tracking-wider">
-                    CGT
-                </div>
+                <!-- Logo oficial en encabezado -->
+                <img src="https://i.ibb.co/NnSCcmgr/Captura-de-pantalla-2026-11-01-211950.png" alt="Logo CGT Amazon RMU1" class="h-12 w-12 object-contain rounded-full border border-red-600 shadow-md bg-gray-950">
                 <div>
                     <h1 class="font-bold text-base sm:text-lg text-white leading-tight">CGT RMU1 DESCUENTO DE HUELGA</h1>
                     <p class="text-xs text-red-400 font-medium">Sección Sindical CGT Amazon RMU1</p>
@@ -82,10 +80,10 @@
                     CGT RMU1 - Información de Huelga
                 </span>
                 
-                <!-- Recuadro rojo con letras CGT en negro a la izquierda del texto -->
+                <!-- Encabezado con la imagen subida a la izquierda -->
                 <div class="flex flex-col sm:flex-row sm:items-center gap-4 pt-1">
-                    <div class="w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 bg-red-600 rounded-2xl shadow-xl flex items-center justify-center border border-red-500">
-                        <span class="text-black font-black text-2xl sm:text-3xl tracking-tighter">CGT</span>
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 bg-gray-950 rounded-2xl p-1 border border-red-800/60 shadow-xl flex items-center justify-center overflow-hidden">
+                        <img src="https://i.ibb.co/NnSCcmgr/Captura-de-pantalla-2026-11-01-211950.png" alt="Portal de Huelga CGT RMU1" class="w-full h-full object-contain rounded-xl">
                     </div>
                     <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
                         Portal de Huelga: <span class="text-red-500">Información y Derechos</span>
@@ -213,12 +211,21 @@
                             </div>
                         </div>
 
-                        <!-- Nota de Seguridad Social -->
-                        <div class="p-3 bg-red-950/30 border border-red-900/40 rounded-xl flex items-center gap-3">
-                            <i class="fa-solid fa-shield-halved text-red-400 text-lg flex-shrink-0"></i>
-                            <p class="text-xs text-gray-300 leading-snug">
-                                Durante el día de huelga pasarás a situación de <strong>alta especial</strong> en la Seguridad Social (no se cotiza ese día, pero no genera baja ni suspensión de antigüedad).
-                            </p>
+                        <!-- Aclaración Paga Extra y Seguridad Social -->
+                        <div class="space-y-2 pt-1">
+                            <div class="p-3 bg-red-950/30 border border-red-900/40 rounded-xl flex items-center gap-3">
+                                <i class="fa-solid fa-calculator text-red-400 text-lg flex-shrink-0"></i>
+                                <p class="text-xs text-gray-300 leading-snug">
+                                    <strong>Incluye Pagas Extras:</strong> Al calcularse sobre el SBA total dividido por 365 días, el resultado ya contempla la deducción de la parte proporcional de las pagas extras y descansos.
+                                </p>
+                            </div>
+
+                            <div class="p-3 bg-gray-950 border border-gray-800 rounded-xl flex items-center gap-3">
+                                <i class="fa-solid fa-shield-halved text-red-400 text-lg flex-shrink-0"></i>
+                                <p class="text-xs text-gray-300 leading-snug">
+                                    Durante el día de huelga pasarás a situación de <strong>alta especial</strong> en la Seguridad Social (no se cotiza ese día, pero no genera baja ni suspensión de antigüedad).
+                                </p>
+                            </div>
                         </div>
 
                     </div>
@@ -244,12 +251,22 @@
                 <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
-                <input type="text" id="faqSearchInput" placeholder="Buscar duda legal (ej. avisar, ETT, turno de noche, piquetes)..."
+                <input type="text" id="faqSearchInput" placeholder="Buscar duda legal (ej. paga extra, avisar, ETT, turno de noche, piquetes)..."
                     class="w-full pl-10 pr-4 py-3 bg-gray-900 border border-gray-800 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-red-500 text-sm">
             </div>
 
             <!-- Acordeón FAQ -->
             <div class="space-y-4" id="faqContainer">
+
+                <div class="faq-item bg-gray-900 border border-gray-800 rounded-xl overflow-hidden transition-colors">
+                    <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                        <span>¿Se descuenta también la parte proporcional de la Paga Extra por hacer huelga?</span>
+                        <i class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden px-4 pb-4 text-sm text-gray-300 border-t border-gray-800/50 pt-3 leading-relaxed">
+                        <strong>Sí, legalmente sí.</strong> El Tribunal Supremo establece que por cada día de huelga la empresa descuenta el salario base del día, la parte proporcional del descanso semanal y la <strong>parte proporcional de la paga extra</strong> (1/365 del total anual de las extras por día no trabajado). Si las cobras prorrateadas mes a mes se descuenta en la propia nómina; si cobras las extras en verano o Navidad, el descuento de la parte proporcional se aplicará cuando cobres dicha paga extra. La calculadora de esta web ya lo tiene incluido automáticamente en el cálculo.
+                    </div>
+                </div>
 
                 <div class="faq-item bg-gray-900 border border-gray-800 rounded-xl overflow-hidden transition-colors">
                     <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
