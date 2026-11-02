@@ -34,67 +34,75 @@
 </head>
 <body class="bg-gray-950 text-gray-100 min-h-screen flex flex-col antialiased">
 
-    <!-- Header / Navbar -->
-    <header class="bg-gray-900 border-b border-red-900/40 sticky top-0 z-50 shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <!-- Logo oficial en encabezado -->
-                <img src="https://i.ibb.co/NnSCcmgr/Captura-de-pantalla-2026-11-01-211950.png" alt="Logo CGT Amazon RMU1" class="h-12 w-12 object-contain rounded-full border border-red-600 shadow-md bg-gray-950">
-                <div>
-                    <h1 class="font-bold text-base sm:text-lg text-white leading-tight">CGT RMU1 DESCUENTO DE HUELGA</h1>
-                    <p class="text-xs text-red-400 font-medium">Sección Sindical CGT Amazon RMU1</p>
+    <!-- Header / Navbar ajustado para móviles -->
+    <header class="bg-gray-900 border-b border-red-900/40 sticky top-0 z-50 shadow-lg py-2.5">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between gap-2">
+            <div class="flex items-center space-x-2 sm:space-x-3 min-w-0">
+                <!-- Logo oficial -->
+                <img src="https://i.ibb.co/NnSCcmgr/Captura-de-pantalla-2026-11-01-211950.png" alt="Logo CGT Amazon RMU1" class="h-10 w-10 sm:h-12 sm:w-12 flex-shrink-0 object-contain rounded-full border border-red-600 shadow-md bg-gray-950">
+                <div class="min-w-0">
+                    <h1 class="font-bold text-xs sm:text-base text-white leading-tight truncate sm:whitespace-normal">
+                        CGT RMU1 DESCUENTO DE HUELGA
+                    </h1>
+                    <p class="text-[10px] sm:text-xs text-red-400 font-medium truncate">Sección Sindical Amazon RMU1</p>
                 </div>
             </div>
+            
             <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
                 <a href="#calc" class="hover:text-red-400 transition-colors">Calculadora SBA</a>
                 <a href="#faq" class="hover:text-red-400 transition-colors">Derechos Laborales</a>
                 <a href="#incidencias" class="hover:text-red-400 transition-colors">Reportar Incidencia</a>
             </div>
-            <a href="mailto:cgtrmu1@gmail.com" class="bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-3 py-1.5 rounded transition-all shadow hover:shadow-red-900/50">
-                <i class="fa-solid fa-envelope mr-1"></i> Contacto CGT
+
+            <a href="mailto:cgtrmu1@gmail.com" class="flex-shrink-0 bg-red-600 hover:bg-red-700 text-white text-[11px] sm:text-xs font-semibold px-2.5 py-1.5 rounded transition-all shadow hover:shadow-red-900/50 flex items-center gap-1">
+                <i class="fa-solid fa-envelope"></i>
+                <span class="hidden xs:inline">Contacto</span> CGT
             </a>
         </div>
     </header>
 
     <!-- Navigation Tabs (Mobile) -->
-    <div class="md:hidden bg-gray-900 border-b border-gray-800 flex justify-around p-2 text-xs font-medium text-gray-400">
-        <a href="#calc" class="hover:text-white flex flex-col items-center gap-1">
-            <i class="fa-solid fa-calculator text-red-500"></i> Calculadora
+    <div class="md:hidden bg-gray-900 border-b border-gray-800 flex justify-between px-4 py-2 text-[11px] font-medium text-gray-400">
+        <a href="#calc" class="hover:text-white flex flex-col items-center gap-1 py-1">
+            <i class="fa-solid fa-calculator text-red-500 text-sm"></i>
+            <span>Calculadora</span>
         </a>
-        <a href="#faq" class="hover:text-white flex flex-col items-center gap-1">
-            <i class="fa-solid fa-scale-balanced text-red-500"></i> Derechos
+        <a href="#faq" class="hover:text-white flex flex-col items-center gap-1 py-1">
+            <i class="fa-solid fa-scale-balanced text-red-500 text-sm"></i>
+            <span>Derechos</span>
         </a>
-        <a href="#incidencias" class="hover:text-white flex flex-col items-center gap-1">
-            <i class="fa-solid fa-paper-plane text-red-500"></i> Reportar
+        <a href="#incidencias" class="hover:text-white flex flex-col items-center gap-1 py-1">
+            <i class="fa-solid fa-paper-plane text-red-500 text-sm"></i>
+            <span>Reportar</span>
         </a>
     </div>
 
     <!-- Main Container -->
-    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 space-y-8 sm:space-y-12">
 
         <!-- Hero Banner -->
-        <section class="bg-gradient-to-r from-gray-900 via-gray-900 to-red-950/40 border border-red-900/50 rounded-2xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+        <section class="bg-gradient-to-r from-gray-900 via-gray-900 to-red-950/40 border border-red-900/50 rounded-2xl p-5 sm:p-10 shadow-2xl relative overflow-hidden">
             <div class="relative z-10 max-w-4xl space-y-4">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-red-950 text-red-400 border border-red-800/50">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] sm:text-xs font-bold bg-red-950 text-red-400 border border-red-800/50">
                     <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
                     CGT RMU1 - Información de Huelga
                 </span>
                 
-                <!-- Encabezado con la imagen subida a la izquierda -->
-                <div class="flex flex-col sm:flex-row sm:items-center gap-4 pt-1">
-                    <div class="w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 bg-gray-950 rounded-2xl p-1 border border-red-800/60 shadow-xl flex items-center justify-center overflow-hidden">
+                <!-- Encabezado con imagen a la izquierda -->
+                <div class="flex flex-row items-center gap-3 sm:gap-4 pt-1">
+                    <div class="w-14 h-14 sm:w-20 sm:h-20 flex-shrink-0 bg-gray-950 rounded-2xl p-1 border border-red-800/60 shadow-xl flex items-center justify-center overflow-hidden">
                         <img src="https://i.ibb.co/NnSCcmgr/Captura-de-pantalla-2026-11-01-211950.png" alt="Portal de Huelga CGT RMU1" class="w-full h-full object-contain rounded-xl">
                     </div>
-                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
-                        Portal de Huelga: <span class="text-red-500">Información y Derechos</span>
+                    <h2 class="text-2xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                        Portal de Huelga: <span class="text-red-500 block sm:inline">Información y Derechos</span>
                     </h2>
                 </div>
 
-                <p class="text-gray-300 text-sm sm:text-base leading-relaxed pt-2">
+                <p class="text-gray-300 text-xs sm:text-base leading-relaxed pt-1 sm:pt-2">
                     Calcula el impacto exacto en tu nómina basándote en el Salario Bruto Anual a 40h y tu jornada real de contrato, conoce tus derechos frente a abusos de la empresa y reporta directamente cualquier incidencia a la Sección Sindical de CGT RMU1.
                 </p>
             </div>
-            <div class="absolute -right-6 -bottom-6 opacity-10 pointer-events-none select-none text-red-500 font-black text-9xl">
+            <div class="absolute -right-6 -bottom-6 opacity-10 pointer-events-none select-none text-red-500 font-black text-8xl sm:text-9xl">
                 CGT
             </div>
         </section>
@@ -106,16 +114,16 @@
                     <i class="fa-solid fa-calculator text-xl"></i>
                 </div>
                 <div>
-                    <h2 class="text-2xl font-bold text-white">Calculadora por Salario Bruto Anual (SBA 40h) y Jornada Real</h2>
+                    <h2 class="text-xl sm:text-2xl font-bold text-white">Calculadora por Salario Bruto Anual (SBA 40h) y Jornada Real</h2>
                     <p class="text-xs text-gray-400">Ponderación automática del salario bruto según las horas semanales contratadas</p>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
 
                 <!-- Formulario -->
-                <div class="lg:col-span-6 bg-gray-900 border border-gray-800 rounded-2xl p-6 shadow-xl space-y-6">
-                    <form id="strikeCalculatorForm" onsubmit="return false;" class="space-y-5">
+                <div class="lg:col-span-6 bg-gray-900 border border-gray-800 rounded-2xl p-5 sm:p-6 shadow-xl space-y-5">
+                    <form id="strikeCalculatorForm" onsubmit="return false;" class="space-y-4 sm:space-y-5">
                         <div>
                             <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">
                                 Salario Bruto Anual a Tiempo Completo (40h) (€)
@@ -175,11 +183,11 @@
 
                 <!-- Resumen de Resultados -->
                 <div class="lg:col-span-6">
-                    <div class="bg-gradient-to-b from-gray-900 to-gray-950 border border-red-900/50 rounded-2xl p-6 shadow-2xl space-y-6 relative overflow-hidden">
+                    <div class="bg-gradient-to-b from-gray-900 to-gray-950 border border-red-900/50 rounded-2xl p-5 sm:p-6 shadow-2xl space-y-5 sm:space-y-6 relative overflow-hidden">
                         
                         <div class="flex justify-between items-center border-b border-gray-800 pb-4">
-                            <span class="text-sm font-semibold text-gray-300 uppercase tracking-wider">Estimación de Descuento</span>
-                            <span class="text-xs bg-red-950 text-red-400 px-2.5 py-1 rounded-full border border-red-800/60 font-semibold">
+                            <span class="text-xs sm:text-sm font-semibold text-gray-300 uppercase tracking-wider">Estimación de Descuento</span>
+                            <span class="text-[10px] sm:text-xs bg-red-950 text-red-400 px-2.5 py-1 rounded-full border border-red-800/60 font-semibold">
                                 Impacto Huelga
                             </span>
                         </div>
@@ -193,19 +201,19 @@
 
                         <!-- Desglose -->
                         <div class="space-y-3 pt-2">
-                            <div class="flex justify-between items-center text-sm">
+                            <div class="flex justify-between items-center text-xs sm:text-sm">
                                 <span class="text-gray-400">SBA Real Proporcional (<span id="hoursTagDisplay">24.5h</span>/semana):</span>
                                 <span class="font-bold text-amber-400 font-mono" id="sbaProportionalDisplay">0,00 €</span>
                             </div>
-                            <div class="flex justify-between items-center text-sm">
+                            <div class="flex justify-between items-center text-xs sm:text-sm">
                                 <span class="text-gray-400">Coste diario ajustado a tu jornada:</span>
                                 <span class="font-bold text-white" id="dailyCostDisplay">0,00 €</span>
                             </div>
-                            <div class="flex justify-between items-center text-sm">
+                            <div class="flex justify-between items-center text-xs sm:text-sm">
                                 <span class="text-gray-400">SBA Base 40h introducido:</span>
                                 <span class="font-mono text-gray-400" id="sbaBaseDisplay">0,00 €</span>
                             </div>
-                            <div class="flex justify-between items-center text-sm">
+                            <div class="flex justify-between items-center text-xs sm:text-sm">
                                 <span class="text-gray-400">Impacto aproximado en nómina del mes:</span>
                                 <span class="font-bold text-amber-400" id="netPercentDisplay">0,00%</span>
                             </div>
@@ -241,7 +249,7 @@
                     <i class="fa-solid fa-scale-balanced text-xl"></i>
                 </div>
                 <div>
-                    <h2 class="text-2xl font-bold text-white">Guía de Derechos Laborales</h2>
+                    <h2 class="text-xl sm:text-2xl font-bold text-white">Guía de Derechos Laborales</h2>
                     <p class="text-xs text-gray-400">Aclara tus dudas legales sobre el ejercicio de tu derecho constitucional a huelga</p>
                 </div>
             </div>
@@ -256,114 +264,114 @@
             </div>
 
             <!-- Acordeón FAQ -->
-            <div class="space-y-4" id="faqContainer">
+            <div class="space-y-3 sm:space-y-4" id="faqContainer">
 
                 <div class="faq-item bg-gray-900 border border-gray-800 rounded-xl overflow-hidden transition-colors">
-                    <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                    <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none text-sm sm:text-base gap-2" onclick="toggleFaq(this)">
                         <span>¿Se descuenta también la parte proporcional de la Paga Extra por hacer huelga?</span>
-                        <i class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
+                        <i class="fa-solid fa-chevron-down text-gray-400 transition-transform flex-shrink-0"></i>
                     </button>
-                    <div class="faq-answer hidden px-4 pb-4 text-sm text-gray-300 border-t border-gray-800/50 pt-3 leading-relaxed">
+                    <div class="faq-answer hidden px-4 pb-4 text-xs sm:text-sm text-gray-300 border-t border-gray-800/50 pt-3 leading-relaxed">
                         <strong>Sí, legalmente sí.</strong> El Tribunal Supremo establece que por cada día de huelga la empresa descuenta el salario base del día, la parte proporcional del descanso semanal y la <strong>parte proporcional de la paga extra</strong> (1/365 del total anual de las extras por día no trabajado). Si las cobras prorrateadas mes a mes se descuenta en la propia nómina; si cobras las extras en verano o Navidad, el descuento de la parte proporcional se aplicará cuando cobres dicha paga extra. La calculadora de esta web ya lo tiene incluido automáticamente en el cálculo.
                     </div>
                 </div>
 
                 <div class="faq-item bg-gray-900 border border-gray-800 rounded-xl overflow-hidden transition-colors">
-                    <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                    <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none text-sm sm:text-base gap-2" onclick="toggleFaq(this)">
                         <span>¿Tengo obligación de avisar a la empresa con antelación si secundó la huelga?</span>
-                        <i class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
+                        <i class="fa-solid fa-chevron-down text-gray-400 transition-transform flex-shrink-0"></i>
                     </button>
-                    <div class="faq-answer hidden px-4 pb-4 text-sm text-gray-300 border-t border-gray-800/50 pt-3 leading-relaxed">
+                    <div class="faq-answer hidden px-4 pb-4 text-xs sm:text-sm text-gray-300 border-t border-gray-800/50 pt-3 leading-relaxed">
                         <strong>No.</strong> El ejercicio del derecho a huelga es individual. No estás obligado a responder a encuestas previas, ni a avisar a tus mandos ni a la empresa sobre si vas a acudir o no a trabajar. Si la empresa pregunta previamente, tienes derecho a no responder.
                     </div>
                 </div>
 
                 <div class="faq-item bg-gray-900 border border-gray-800 rounded-xl overflow-hidden transition-colors">
-                    <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                    <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none text-sm sm:text-base gap-2" onclick="toggleFaq(this)">
                         <span>¿Puedo secundar la huelga si estoy en periodo de prueba, ETT o contrato temporal?</span>
-                        <i class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
+                        <i class="fa-solid fa-chevron-down text-gray-400 transition-transform flex-shrink-0"></i>
                     </button>
-                    <div class="faq-answer hidden px-4 pb-4 text-sm text-gray-300 border-t border-gray-800/50 pt-3 leading-relaxed">
+                    <div class="faq-answer hidden px-4 pb-4 text-xs sm:text-sm text-gray-300 border-t border-gray-800/50 pt-3 leading-relaxed">
                         <strong>Sí, rotundamente.</strong> El derecho a huelga ampara a la totalidad de la plantilla independientemente del tipo de contrato (indefinido, temporal, obra y servicio, ETT, formación) o de si estás en periodo de prueba. Despedir o no renovar a alguien por hacer huelga constituye una vulneración de Derechos Fundamentales y es causa de despido nulo.
                     </div>
                 </div>
 
                 <div class="faq-item bg-gray-900 border border-gray-800 rounded-xl overflow-hidden transition-colors">
-                    <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                    <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none text-sm sm:text-base gap-2" onclick="toggleFaq(this)">
                         <span>¿Pueden sancionarme o despedirme por hacer huelga?</span>
-                        <i class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
+                        <i class="fa-solid fa-chevron-down text-gray-400 transition-transform flex-shrink-0"></i>
                     </button>
-                    <div class="faq-answer hidden px-4 pb-4 text-sm text-gray-300 border-t border-gray-800/50 pt-3 leading-relaxed">
+                    <div class="faq-answer hidden px-4 pb-4 text-xs sm:text-sm text-gray-300 border-t border-gray-800/50 pt-3 leading-relaxed">
                         <strong>Tajantemente NO.</strong> La huelga convocada es un derecho fundamental (Art. 28.2 Constitución Española). Cualquier sanción, despido o trato discriminatorio por secundarla es radicalmente nulo por vulneración de derechos fundamentales.
                     </div>
                 </div>
 
                 <div class="faq-item bg-gray-900 border border-gray-800 rounded-xl overflow-hidden transition-colors">
-                    <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                    <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none text-sm sm:text-base gap-2" onclick="toggleFaq(this)">
                         <span>¿Qué ocurre con la huelga si trabajo en el turno de noche?</span>
-                        <i class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
+                        <i class="fa-solid fa-chevron-down text-gray-400 transition-transform flex-shrink-0"></i>
                     </button>
-                    <div class="faq-answer hidden px-4 pb-4 text-sm text-gray-300 border-t border-gray-800/50 pt-3 leading-relaxed">
+                    <div class="faq-answer hidden px-4 pb-4 text-xs sm:text-sm text-gray-300 border-t border-gray-800/50 pt-3 leading-relaxed">
                         La huelga computa para el turno que comience dentro de la jornada de huelga (habitualmente desde las 00:00 hasta las 24:00 del día convocado). Si tu turno empieza la noche de la jornada de huelga, esa jornada completa de trabajo queda amparada por la huelga.
                     </div>
                 </div>
 
                 <div class="faq-item bg-gray-900 border border-gray-800 rounded-xl overflow-hidden transition-colors">
-                    <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                    <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none text-sm sm:text-base gap-2" onclick="toggleFaq(this)">
                         <span>¿Qué es el "esquirolaje" y qué hago si la empresa intenta sustituirme?</span>
-                        <i class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
+                        <i class="fa-solid fa-chevron-down text-gray-400 transition-transform flex-shrink-0"></i>
                     </button>
-                    <div class="faq-answer hidden px-4 pb-4 text-sm text-gray-300 border-t border-gray-800/50 pt-3 leading-relaxed">
+                    <div class="faq-answer hidden px-4 pb-4 text-xs sm:text-sm text-gray-300 border-t border-gray-800/50 pt-3 leading-relaxed">
                         El esquirolaje es la sustitución de los trabajadores en huelga por personal externo o mediante la reasignación interna de tareas no habituales a otros trabajadores no huelguistas. <strong>Es completamente ilegal.</strong> Si detectas esta práctica en tu centro de trabajo, documenta la situación y repórtala de inmediato en la sección de incidencias.
                     </div>
                 </div>
 
                 <div class="faq-item bg-gray-900 border border-gray-800 rounded-xl overflow-hidden transition-colors">
-                    <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                    <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none text-sm sm:text-base gap-2" onclick="toggleFaq(this)">
                         <span>¿Tengo derecho a participar en piquetes informativos?</span>
-                        <i class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
+                        <i class="fa-solid fa-chevron-down text-gray-400 transition-transform flex-shrink-0"></i>
                     </button>
-                    <div class="faq-answer hidden px-4 pb-4 text-sm text-gray-300 border-t border-gray-800/50 pt-3 leading-relaxed">
+                    <div class="faq-answer hidden px-4 pb-4 text-xs sm:text-sm text-gray-300 border-t border-gray-800/50 pt-3 leading-relaxed">
                         <strong>Sí.</strong> La ley reconoce explícitamente el derecho de los trabajadores en huelga a constituir piquetes informativos a las puertas del centro de trabajo para dar a conocer las reivindicaciones y pedir pacíficamente el apoyo a la huelga sin coacción ni violencia.
                     </div>
                 </div>
 
                 <div class="faq-item bg-gray-900 border border-gray-800 rounded-xl overflow-hidden transition-colors">
-                    <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                    <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none text-sm sm:text-base gap-2" onclick="toggleFaq(this)">
                         <span>¿Me pueden quitar el plus de asistencia, puntualidad o incentivos por hacer huelga?</span>
-                        <i class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
+                        <i class="fa-solid fa-chevron-down text-gray-400 transition-transform flex-shrink-0"></i>
                     </button>
-                    <div class="faq-answer hidden px-4 pb-4 text-sm text-gray-300 border-t border-gray-800/50 pt-3 leading-relaxed">
+                    <div class="faq-answer hidden px-4 pb-4 text-xs sm:text-sm text-gray-300 border-t border-gray-800/50 pt-3 leading-relaxed">
                         El descuento salarial solo puede aplicarse sobre la parte proporcional de los conceptos retributivos del día de huelga (salario base y complementos prorrateados). Quitar la totalidad de un plus de asistencia o penalizar incentivos mensuales de forma desproporcionada por el mero hecho de ejercer el derecho a huelga es una sanción encubierta e **ilegal**.
                     </div>
                 </div>
 
                 <div class="faq-item bg-gray-900 border border-gray-800 rounded-xl overflow-hidden transition-colors">
-                    <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                    <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none text-sm sm:text-base gap-2" onclick="toggleFaq(this)">
                         <span>¿Cómo funcionan los Servicios Mínimos?</span>
-                        <i class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
+                        <i class="fa-solid fa-chevron-down text-gray-400 transition-transform flex-shrink-0"></i>
                     </button>
-                    <div class="faq-answer hidden px-4 pb-4 text-sm text-gray-300 border-t border-gray-800/50 pt-3 leading-relaxed">
+                    <div class="faq-answer hidden px-4 pb-4 text-xs sm:text-sm text-gray-300 border-t border-gray-800/50 pt-3 leading-relaxed">
                         Los servicios mínimos solo aplican a sectores esenciales fijados por la autoridad gubernativa. Si se te asignan servicios mínimos, la empresa debe notificártelo individualmente por escrito con antelación. En caso de duda sobre la legalidad de tus servicios mínimos, contacta urgente con la Sección Sindical.
                     </div>
                 </div>
 
                 <div class="faq-item bg-gray-900 border border-gray-800 rounded-xl overflow-hidden transition-colors">
-                    <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                    <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none text-sm sm:text-base gap-2" onclick="toggleFaq(this)">
                         <span>¿Pierdo días de vacaciones o antigüedad por hacer huelga?</span>
-                        <i class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
+                        <i class="fa-solid fa-chevron-down text-gray-400 transition-transform flex-shrink-0"></i>
                     </button>
-                    <div class="faq-answer hidden px-4 pb-4 text-sm text-gray-300 border-t border-gray-800/50 pt-3 leading-relaxed">
+                    <div class="faq-answer hidden px-4 pb-4 text-xs sm:text-sm text-gray-300 border-t border-gray-800/50 pt-3 leading-relaxed">
                         <strong>No.</strong> La huelga suspende la obligación de trabajar y de abonar el salario de ese día, pero no reduce en ningún caso los días de vacaciones anuales ni computa negativamente para el cálculo de tu antigüedad en la empresa.
                     </div>
                 </div>
 
                 <div class="faq-item bg-gray-900 border border-gray-800 rounded-xl overflow-hidden transition-colors">
-                    <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                    <button class="w-full p-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none text-sm sm:text-base gap-2" onclick="toggleFaq(this)">
                         <span>¿Qué hago si mi responsable o mando me obliga a firmar un documento de adscripción?</span>
-                        <i class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
+                        <i class="fa-solid fa-chevron-down text-gray-400 transition-transform flex-shrink-0"></i>
                     </button>
-                    <div class="faq-answer hidden px-4 pb-4 text-sm text-gray-300 border-t border-gray-800/50 pt-3 leading-relaxed">
+                    <div class="faq-answer hidden px-4 pb-4 text-xs sm:text-sm text-gray-300 border-t border-gray-800/50 pt-3 leading-relaxed">
                         No debes firmar ningún documento donde te pidan declarar de antemano si secundarás la huelga. Si insisten o hay coacción, anota nombres, hora y lugar, y repórtalo inmediatamente a la Sección Sindical de CGT para iniciar las acciones legales oportunas.
                     </div>
                 </div>
@@ -378,23 +386,23 @@
                     <i class="fa-solid fa-paper-plane text-xl"></i>
                 </div>
                 <div>
-                    <h2 class="text-2xl font-bold text-white">Reportar Incidencia a CGT RMU1</h2>
+                    <h2 class="text-xl sm:text-2xl font-bold text-white">Reportar Incidencia a CGT RMU1</h2>
                     <p class="text-xs text-gray-400">Notifica presiones, esquirolaje o vulneraciones directamente a la Sección Sindical</p>
                 </div>
             </div>
 
-            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8 shadow-2xl relative">
+            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-5 sm:p-8 shadow-2xl relative">
                 
-                <div class="mb-6 p-3.5 bg-red-950/40 border border-red-800/60 rounded-xl flex items-center justify-between">
-                    <div class="flex items-center space-x-3">
-                        <i class="fa-solid fa-circle-check text-red-500 text-lg"></i>
-                        <span class="text-xs text-gray-200">Destinatario directo: <strong class="text-white font-mono">cgtrmu1@gmail.com</strong></span>
+                <div class="mb-6 p-3.5 bg-red-950/40 border border-red-800/60 rounded-xl flex items-center justify-between gap-2">
+                    <div class="flex items-center space-x-2 sm:space-x-3 min-w-0">
+                        <i class="fa-solid fa-circle-check text-red-500 text-base sm:text-lg flex-shrink-0"></i>
+                        <span class="text-xs text-gray-200 truncate">Destinatario: <strong class="text-white font-mono">cgtrmu1@gmail.com</strong></span>
                     </div>
-                    <span class="text-[10px] bg-red-900/60 text-red-300 px-2 py-0.5 rounded uppercase font-bold tracking-wider">Envío Directo</span>
+                    <span class="text-[10px] bg-red-900/60 text-red-300 px-2 py-0.5 rounded uppercase font-bold tracking-wider flex-shrink-0">Envío Directo</span>
                 </div>
 
-                <form id="incidentForm" class="space-y-6">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <form id="incidentForm" class="space-y-5 sm:space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
                         <div>
                             <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Nombre o Alias (Opcional)</label>
                             <input type="text" name="nombre" id="incNombre" placeholder="Tu nombre o 'Anónimo'"
@@ -425,8 +433,8 @@
                             class="w-full px-4 py-2.5 bg-gray-950 border border-gray-800 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-red-500 text-sm"></textarea>
                     </div>
 
-                    <div class="flex flex-col sm:flex-row items-center gap-4 pt-2">
-                        <button type="submit" id="submitBtn" class="w-full sm:w-auto flex-1 bg-red-600 hover:bg-red-700 text-white font-bold py-3.5 px-6 rounded-xl transition-all shadow-lg shadow-red-950 flex items-center justify-center gap-2">
+                    <div class="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 pt-2">
+                        <button type="submit" id="submitBtn" class="w-full sm:w-auto flex-1 bg-red-600 hover:bg-red-700 text-white font-bold py-3.5 px-6 rounded-xl transition-all shadow-lg shadow-red-950 flex items-center justify-center gap-2 text-sm">
                             <i class="fa-solid fa-paper-plane"></i>
                             <span>Enviar Incidencia por Email a CGT</span>
                         </button>
@@ -445,7 +453,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 border-t border-gray-800 py-8 mt-12 text-center text-xs text-gray-400">
+    <footer class="bg-gray-900 border-t border-gray-800 py-6 sm:py-8 mt-12 text-center text-xs text-gray-400">
         <div class="max-w-7xl mx-auto px-4 space-y-3">
             <div class="flex justify-center items-center space-x-2">
                 <span class="bg-red-600 text-white font-bold px-2 py-0.5 rounded text-[10px]">CGT RMU1</span>
