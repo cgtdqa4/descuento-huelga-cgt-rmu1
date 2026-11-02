@@ -132,7 +132,7 @@
                                 <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
                                     <i class="fa-solid fa-euro-sign"></i>
                                 </div>
-                                <input type="number" id="sbaInput" placeholder="Ej: 20475.90" min="0" step="0.01" value="20475.90" required
+                                <input type="number" id="sbaInput" placeholder="Ej: 20475.90" min="0" step="0.01" value="0" required
                                     class="w-full pl-10 pr-4 py-3 bg-gray-950 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500 text-base transition-colors">
                             </div>
                             <p class="text-[11px] text-gray-400 mt-1.5">
@@ -148,7 +148,7 @@
                                 <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
                                     <i class="fa-solid fa-clock"></i>
                                 </div>
-                                <input type="number" id="weeklyHoursInput" value="24.5" min="1" max="40" step="0.5" required
+                                <input type="number" id="weeklyHoursInput" value="0" min="0" max="40" step="0.5" placeholder="Ej: 40" required
                                     class="w-full pl-10 pr-4 py-3 bg-gray-950 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500 text-base transition-colors">
                             </div>
                             <p class="text-[11px] text-gray-400 mt-1.5">
@@ -164,7 +164,7 @@
                                 <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
                                     <i class="fa-solid fa-calendar-day"></i>
                                 </div>
-                                <input type="number" id="strikeDaysInput" value="1" min="1" max="30" required
+                                <input type="number" id="strikeDaysInput" value="0" min="0" max="30" placeholder="Ej: 1" required
                                     class="w-full pl-10 pr-4 py-3 bg-gray-950 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500 text-base transition-colors">
                             </div>
                         </div>
@@ -196,13 +196,13 @@
                         <div class="bg-gray-950 border border-gray-800 rounded-xl p-5 text-center space-y-1">
                             <span class="text-xs uppercase font-medium text-gray-400">Descuento Total Estimado</span>
                             <div class="text-4xl sm:text-5xl font-black text-red-500 tracking-tight" id="totalDiscountDisplay">0,00 €</div>
-                            <span class="text-[11px] text-gray-500 block" id="daysSubtext">Para 1 jornada de huelga</span>
+                            <span class="text-[11px] text-gray-500 block" id="daysSubtext">Introduce tus datos para calcular</span>
                         </div>
 
                         <!-- Desglose -->
                         <div class="space-y-3 pt-2">
                             <div class="flex justify-between items-center text-xs sm:text-sm">
-                                <span class="text-gray-400">SBA Real Proporcional (<span id="hoursTagDisplay">24.5h</span>/semana):</span>
+                                <span class="text-gray-400">SBA Real Proporcional (<span id="hoursTagDisplay">0h</span>/semana):</span>
                                 <span class="font-bold text-amber-400 font-mono" id="sbaProportionalDisplay">0,00 €</span>
                             </div>
                             <div class="flex justify-between items-center text-xs sm:text-sm">
@@ -480,16 +480,17 @@
 
         function calculateDiscount() {
             const sbaFullTime = parseFloat(sbaInput.value) || 0;
-            const weeklyHours = parseFloat(weeklyHoursInput.value) || 40;
-            const days = parseInt(strikeDaysInput.value) || 1;
+            const weeklyHours = parseFloat(weeklyHoursInput.value) || 0;
+            const days = parseInt(strikeDaysInput.value) || 0;
 
-            if (sbaFullTime <= 0) {
+            if (sbaFullTime <= 0 || weeklyHours <= 0 || days <= 0) {
                 totalDiscountDisplay.textContent = '0,00 €';
                 sbaProportionalDisplay.textContent = '0,00 €';
                 dailyCostDisplay.textContent = '0,00 €';
-                sbaBaseDisplay.textContent = '0,00 €';
+                sbaBaseDisplay.textContent = `${sbaFullTime.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} €`;
                 netPercentDisplay.textContent = '0,00%';
-                daysSubtext.textContent = `Para ${days} jornada(s) de huelga`;
+                hoursTagDisplay.textContent = `${weeklyHours}h`;
+                daysSubtext.textContent = 'Introduce tus datos para calcular';
                 return;
             }
 
